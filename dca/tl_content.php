@@ -1,7 +1,5 @@
 <?php
 
-namespace postyou;
-
 checkConfFile();
 
 if (TL_MODE == 'BE')
@@ -30,11 +28,11 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['headline'] = array
     'allowHtml' => true,
     'load_callback' => array
     (
-        array('postyou\tl_content', 'loadHeadline')
+        array('my_tl_content', 'loadHeadline')
     ),
     'save_callback' => array
     (
-        array('postyou\tl_content', 'saveHeadline')
+        array('my_tl_content', 'saveHeadline')
     ),
     'sql' => "varchar(255) NOT NULL default ''"
 );
@@ -50,16 +48,16 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['headlineOptn'] = array
     'eval' => array('tl_class' => 'w50 h_mce_optn', 'doNotSaveEmpty' => true),
     'save_callback' => array
     (
-        array('postyou\tl_content', 'saveHeadlineOptn')
+        array('my_tl_content', 'saveHeadlineOptn')
     ),
     'load_callback' => array
     (
-        array('postyou\tl_content', 'loadHeadlineOptn')
+        array('my_tl_content', 'loadHeadlineOptn')
     ), 'sql' => "char(2) NOT NULL default ''"
 );
 
 
-class tl_content extends \Backend
+class my_tl_content extends \Backend
 {
 
     private $headlineTypeForLoad = "h1";
