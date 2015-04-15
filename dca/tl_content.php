@@ -28,11 +28,11 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['headline'] = array
     'allowHtml' => true,
     'load_callback' => array
     (
-        array('my_tl_content', 'loadHeadline')
+        array('htm_tl_content', 'loadHeadline')
     ),
     'save_callback' => array
     (
-        array('my_tl_content', 'saveHeadline')
+        array('htm_tl_content', 'saveHeadline')
     ),
     'sql' => "varchar(255) NOT NULL default ''"
 );
@@ -48,16 +48,16 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['headlineOptn'] = array
     'eval' => array('tl_class' => 'w50 h_mce_optn', 'doNotSaveEmpty' => true),
     'save_callback' => array
     (
-        array('my_tl_content', 'saveHeadlineOptn')
+        array('htm_tl_content', 'saveHeadlineOptn')
     ),
     'load_callback' => array
     (
-        array('my_tl_content', 'loadHeadlineOptn')
+        array('htm_tl_content', 'loadHeadlineOptn')
     ), 'sql' => "char(2) NOT NULL default ''"
 );
 
 
-class my_tl_content extends \Backend
+class htm_tl_content extends \Backend
 {
 
     private $headlineTypeForLoad = "h1";
