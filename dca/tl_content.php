@@ -69,7 +69,7 @@ class htm_tl_content extends \Backend
         if (isset($varValue)){
             if ( @unserialize($varValue) !== false) {
             $arrData = deserialize($varValue);
-            $this->headlineTypeForLoad = $arrData["unit"];
+           $this->headlineTypeForLoad = isset($arrData["unit"])?$arrData["unit"]:$this->headlineTypeForLoad;
             return $arrData["value"];}
             else
                 return $varValue;
