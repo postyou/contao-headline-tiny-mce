@@ -40,9 +40,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['headline'] = array
 $GLOBALS['TL_DCA']['tl_content']['fields']['headlineOptn'] = array
 (
     'label' => &$GLOBALS['TL_LANG']['tl_content']['headlineOptn'],
-    'default' => 'h5',
-    'exclude' => true,
-    'search' => false,
     'inputType' => 'select',
     'options' => array('h1', 'h2', 'h3', 'h4', 'h5', 'h6'),
     'eval' => array('tl_class' => 'w50 h_mce_optn', 'doNotSaveEmpty' => true),
@@ -53,14 +50,14 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['headlineOptn'] = array
     'load_callback' => array
     (
         array('htm_tl_content', 'loadHeadlineOptn')
-    ), 'sql' => "char(2) NOT NULL default ''"
+    )
 );
 
 
 class htm_tl_content extends \Backend
 {
 
-    private $headlineTypeForLoad = "h1";
+    private $headlineTypeForLoad = "h5";
 
 
     function loadHeadline($varValue, \DC_Table $dc)
@@ -69,7 +66,7 @@ class htm_tl_content extends \Backend
         if (isset($varValue)){
             if ( @unserialize($varValue) !== false) {
             $arrData = deserialize($varValue);
-           $this->headlineTypeForLoad = isset($arrData["unit"])?$arrData["unit"]:$this->headlineTypeForLoad;
+            $this->headlineTypeForLoad = isset($arrData["unit"])?$arrData["unit"]:$this->headlineTypeForLoad;
             return $arrData["value"];}
             else
                 return $varValue;
@@ -81,18 +78,20 @@ class htm_tl_content extends \Backend
     function saveHeadline($varValue, \DC_Table $dc)
     {
         $temparray = array();
-        $temparray["unit"] = isset($_POST['headlineOptn'])?\Input::post('headlineOptn'):$this->headlineTypeForLoad;
+        $temparray["unit"] = ((isset($_POST['headlineOptn']))?\Input::post('headlineOptn'):$this->headlineTypeForLoad);
         $temparray["value"] = $varValue;
         return serialize($temparray);
     }
 
     function loadHeadlineOptn($varValue, \DC_Table $dc)
     {
+        
         return $this->headlineTypeForLoad;
     }
 
     function saveHeadlineOptn()
     {
+        return "";
         //you need this to avoid a database error
     }
 
