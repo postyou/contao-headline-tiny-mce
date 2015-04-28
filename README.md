@@ -3,7 +3,9 @@ contao-headline-tiny-mce
 
 A Contao extension to have and regulate html in headings
 
-usage:
+Caution: does not work well with other extensions which declare custom content elements. Make shure those are loaded before this extension.
+
+instell:
 
 "require": {
 
