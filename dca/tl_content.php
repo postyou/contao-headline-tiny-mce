@@ -81,7 +81,7 @@ class htm_tl_content extends \Backend
     function saveHeadline($varValue, \DC_Table $dc)
     {
         $temparray = array();
-        $temparray["unit"] = $_POST['headlineOptn'];
+        $temparray["unit"] = isset($_POST['headlineOptn'])?\Input::post('headlineOptn'):$this->headlineTypeForLoad;
         $temparray["value"] = $varValue;
         return serialize($temparray);
     }
