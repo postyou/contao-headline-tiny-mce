@@ -23,9 +23,8 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['headline'] = array
     'exclude' => true,
     'search' => true,
     'inputType' => 'textarea',
-    'eval' => array('rte' => 'h_tinyMCE', 'maxlength' => 200, 'helpwizard' => true, 'tl_class' => 'h_mce clr w50'),
+    'eval' => array('rte' => 'h_tinyMCE','allowHtml' => true, 'maxlength' => 200, 'helpwizard' => true, 'tl_class' => 'h_mce clr w50'),
     'explanation' => 'insertTags',
-    'allowHtml' => true,
     'load_callback' => array
     (
         array('htm_tl_content', 'loadHeadline')
