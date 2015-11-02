@@ -9,7 +9,7 @@ instell:
 
 "require": {
 
-    "postyou/headline-tiny-mce": "dev-master"
+    "postyou/headline-tiny-mce": "~1.0"
 
 },
 
@@ -18,7 +18,7 @@ instell:
     {
 
         "type": "vcs",
-        "url": "https://github.com/garyee/contao-headline-tiny-mce"
+        "url": "https://github.com/postyou/contao-headline-tiny-mce"
     }
 
 ],
