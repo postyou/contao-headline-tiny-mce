@@ -3,7 +3,7 @@
  * Headline HTML
  * Extension for Contao Open Source CMS (contao.org)
  *
- * Copyright (c) 2015 POSTYOU
+ * Copyright (c) 2016 POSTYOU
  *
  * @package headline-tiny-mce
  * @author  Gerald Meier
@@ -108,11 +108,13 @@ class htm_tl_content extends \Backend
 
 function checkConfFile()
 {
-    if (!file_exists("/system/config/h_tinyMCE.php")) {
-        if (!file_exists("/system/config/h_tinyMCE.php")) {
+    if (!file_exists(TL_ROOT . "/system/config/h_tinyMCE.php")) {
+        if (!file_exists(TL_ROOT . "/system/config/h_tinyMCE.php")) {
             $fileOld = new \File("/system/modules/headline-tiny-mce/config/h_tinyMCE.php");
             $fileOld->copyTo("/system/config/h_tinyMCE.php");
-            $fileOld->close();
+            if (file_exists(TL_ROOT . "/system/config/h_tinyMCE.php")) {
+                $fileOld->close();
+            }
         } else {
             throw new \Exception("/system/modules/headline-tiny-mce/config/h_tinyMCE.php existiert nicht mehr!");
         }
