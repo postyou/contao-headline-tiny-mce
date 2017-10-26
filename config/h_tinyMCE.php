@@ -39,7 +39,7 @@ if ($GLOBALS['TL_CONFIG']['useRTE']):
             browser_spellcheck: true,
             importcss_append: true,
             importcss_groups: [{title: "<?php echo Config::get('uploadPath'); ?>/tinymce.css"}],
-            content_css: "<?php echo TL_PATH; ?>/system/themes/tinymce.css,system/modules/h_mce/assets/css/h_tinyMce.css,<?php echo TL_PATH . '/' . Config::get('uploadPath'); ?>/tinymce.css",
+            content_css: "<?php echo TL_PATH; ?>/system/themes/tinymce.css,system/modules/headline-tiny-mce/assets/css/h_tinyMce.css,<?php echo TL_PATH . '/' . Config::get('uploadPath'); ?>/tinymce.css",
             extended_valid_elements: "strong/b",
             menubar: false,
             setup: function (ed) {
