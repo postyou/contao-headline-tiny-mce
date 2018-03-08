@@ -66,7 +66,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['headlineOptn'] = array
 class htm_tl_content extends \Backend
 {
 
-    private $headlineTypeForLoad = "h5";
+    private $headlineTypeForLoad = "h1";
 
 
     function loadHeadline($varValue, \DC_Table $dc)
@@ -94,7 +94,7 @@ class htm_tl_content extends \Backend
 
     function loadHeadlineOptn($varValue, \DC_Table $dc)
     {
-        
+
         return $this->headlineTypeForLoad;
     }
 
