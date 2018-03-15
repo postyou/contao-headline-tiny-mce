@@ -20,7 +20,7 @@
  */
 $scopeMatcher=\System::getContainer()->get('contao.routing.scope_matcher');
 $requestStack=\System::getContainer()->get('request_stack');
-if ($scopeMatcher->isBackendRequest($requestStack->getCurrentRequest()))
+if (null !== $requestStack->getCurrentRequest() && $scopeMatcher->isBackendRequest($requestStack->getCurrentRequest()))
 {
     $GLOBALS['TL_CSS'][] = 'bundles/headlinetinymce/h_tinyMce.css|static';
 }
