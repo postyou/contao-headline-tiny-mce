@@ -1,14 +1,14 @@
 {
   "name": "postyou/headline-tiny-mce",
+  "type": "contao-bundle",
   "description": "HTML headline for Contao",
+  "license": "LGPL-3.0+",
   "keywords": [
     "contao",
     "headline",
     "html",
     "tiny-mce"
   ],
-  "type": "contao-bundle",
-  "license": "LGPL-3.0+",
   "authors": [
     {
       "name": "Gerald Meier",
@@ -16,24 +16,14 @@
     },
     {
       "name":"postyou",
-      "homepage":"http://postyou.de"
+      "homepage":"https://www.postyou.de"
     }
   ],
   "require": {
-    "php": "~7.2",
-    "contao/core-bundle": "~4.4"
+    "php": "^7.2 || ^8.0",
+    "contao/core-bundle": "^4.11"
   },
   "autoload": {
-    "classmap": [
-      "src/Resources/contao/"
-    ],
-    "exclude-from-classmap": [
-      "src/Resources/contao/cache/",
-      "src/Resources/contao/config/",
-      "src/Resources/contao/dca/",
-      "src/Resources/contao/languages/",
-      "src/Resources/contao/templates/"
-    ],
     "psr-4": {
       "Postyou\\HeadlineTinyMceBundle\\": "src/"
     }
@@ -41,5 +31,4 @@
   "extra": {
     "contao-manager-plugin": "Postyou\\HeadlineTinyMceBundle\\ContaoManager\\Plugin"
   }
-
 }
