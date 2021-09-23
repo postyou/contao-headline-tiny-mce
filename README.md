@@ -9,7 +9,7 @@ This Contao CMS extension adds a small TinyMCE editor to all DCA `headline` fiel
 ![](docs/Headline-TinyMCE-Editor.png)
 
 ## Template
-The `be_tinyHeadlineMCE.html5` template is applied and disables the default paragraph root block and limits the valid elements. Only [phrasing content](https://www.w3.org/TR/2014/REC-html5-20141028/dom.html#phrasing-content-1) should be allowed inside of HTML headings.
+The `be_tinyHeadlineMCE.html5` template is used by default. It disables the default paragraph root block and limits the valid elements. Only [phrasing content](https://www.w3.org/TR/2014/REC-html5-20141028/dom.html#phrasing-content-1) should be allowed inside of HTML headings.
 ```php
 <script>
 window.tinymce && tinymce.init({
