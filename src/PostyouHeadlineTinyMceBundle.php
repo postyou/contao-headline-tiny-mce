@@ -9,7 +9,7 @@ declare(strict_types=1);
  *
  * @author  Gerald Meier
  * @link    https://www.postyou.de
- * @license LGPL-3.0-or-later
+ * @license LGPL-3.0+
  */
 
 namespace Postyou\HeadlineTinyMceBundle;
