@@ -2,7 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Postyou\HeadlineTinyMceBundle\EventListener\DataContainer;
+/*
+ * This file is part of postyou/headline-tiny-mce.
+ *
+ * (c) POSTYOU Digital- & Filmagentur
+ *
+ * @author  Gerald Meier
+ * @link    https://www.postyou.de
+ * @license LGPL-3.0-or-later
+ */
+
+namespace Postyou\HeadlineTinyMceBundle\EventListener;
 
 use Contao\CoreBundle\ServiceAnnotation\Callback;
 

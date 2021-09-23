@@ -2,7 +2,7 @@
   "name": "postyou/headline-tiny-mce",
   "type": "contao-bundle",
   "description": "HTML headline for Contao",
-  "license": "LGPL-3.0+",
+  "license": "LGPL-3.0-or-later",
   "keywords": [
     "contao",
     "headline",
@@ -15,13 +15,23 @@
       "role": "Developer"
     },
     {
-      "name":"postyou",
+      "name":"POSTYOU Digital- & Filmagentur",
       "homepage":"https://www.postyou.de"
     }
   ],
   "require": {
     "php": "^7.2 || ^8.0",
-    "contao/core-bundle": "^4.10"
+    "contao/core-bundle": "^4.10",
+    "symfony/config": "^4.4 || ^5.1",
+    "symfony/dependency-injection": "^4.4 || ^5.1",
+    "symfony/http-kernel": "^4.4 || ^5.1"
+  },
+  "conflict": {
+    "contao/manager-plugin": "<2.0 || >=3.0"
+  },
+  "require-dev": {
+    "contao/manager-plugin": "^2.0",
+    "contao/easy-coding-standard": "^3.3"
   },
   "autoload": {
     "psr-4": {
@@ -30,5 +40,10 @@
   },
   "extra": {
     "contao-manager-plugin": "Postyou\\HeadlineTinyMceBundle\\ContaoManager\\Plugin"
+  },
+  "scripts": {
+    "cs-fixer": [
+        "vendor/bin/ecs check src/ --fix --ansi"
+    ]
   }
 }

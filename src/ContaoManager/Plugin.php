@@ -3,11 +3,13 @@
 declare(strict_types=1);
 
 /*
- * This file is part of Contao.
+ * This file is part of postyou/headline-tiny-mce.
  *
- * Copyright (c) 2005-2017 Leo Feyer
+ * (c) POSTYOU Digital- & Filmagentur
  *
- * @license LGPL-3.0+
+ * @author  Gerald Meier
+ * @link    https://www.postyou.de
+ * @license LGPL-3.0-or-later
  */
 
 namespace Postyou\HeadlineTinyMceBundle\ContaoManager;
@@ -25,7 +27,7 @@ class Plugin implements BundlePluginInterface
         return [
             BundleConfig::create(PostyouHeadlineTinyMceBundle::class)
                 ->setLoadAfter([ContaoCoreBundle::class])
-                ->setReplace(["headlinetinymce"])
+                ->setReplace(['headlinetinymce']),
         ];
     }
 }

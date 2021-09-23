@@ -2,15 +2,14 @@
 
 declare(strict_types=1);
 
-/**
- * Extension for Contao Open Source CMS (contao.org)
+/*
+ * This file is part of postyou/headline-tiny-mce.
  *
- * Copyright (c) 2017 POSTYOU
+ * (c) POSTYOU Digital- & Filmagentur
  *
- * @package postyou/headline-tiny-mce
  * @author  Gerald Meier
- * @link    http://www.postyou.de
- * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
+ * @link    https://www.postyou.de
+ * @license LGPL-3.0-or-later
  */
 
 namespace Postyou\HeadlineTinyMceBundle\DependencyInjection;

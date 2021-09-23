@@ -2,6 +2,7 @@ services:
     _defaults:
         autowire: true
         autoconfigure: true
-        public: false
 
-    Postyou\HeadlineTinyMceBundle\EventListener\DataContainer\OnLoadCallbackListener:
+    Postyou\HeadlineTinyMceBundle\:
+        resource: ../../
+        exclude: ../../{ContaoManager,DependencyInjection,Resources}

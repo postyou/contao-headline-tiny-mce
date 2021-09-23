@@ -2,16 +2,14 @@
 
 declare(strict_types=1);
 
-/**
- * Headline HTML
- * Extension for Contao Open Source CMS (contao.org)
+/*
+ * This file is part of postyou/headline-tiny-mce.
  *
- * Copyright (c) 2016 POSTYOU
+ * (c) POSTYOU Digital- & Filmagentur
  *
- * @package headline-tiny-mce
  * @author  Gerald Meier
  * @link    https://www.postyou.de
- * @license https://www.gnu.org/licenses/lgpl-3.0.html LGPL
+ * @license LGPL-3.0-or-later
  */
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['headline']['eval']['allowHtml'] = true;
