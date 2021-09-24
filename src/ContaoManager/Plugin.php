@@ -1,10 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 /*
- * This file is part of Contao.
+ * This file is part of postyou/headline-tiny-mce.
  *
- * Copyright (c) 2005-2017 Leo Feyer
+ * (c) POSTYOU Digital- & Filmagentur
  *
+ * @author  Gerald Meier
+ * @link    https://www.postyou.de
  * @license LGPL-3.0+
  */
 
@@ -14,25 +18,16 @@ use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
-use Contao\NewsBundle\ContaoNewsBundle;
-use Postyou\HeadlineTinyMceBundle\HeadlineTinyMceBundle;
+use Postyou\HeadlineTinyMceBundle\PostyouHeadlineTinyMceBundle;
 
-/**
- * Plugin for the Contao Manager.
- *
- * @author Andreas Schempp <https://github.com/aschempp>
- */
 class Plugin implements BundlePluginInterface
 {
-    /**
-     * {@inheritdoc}
-     */
     public function getBundles(ParserInterface $parser)
     {
         return [
-            BundleConfig::create(HeadlineTinyMceBundle::class)
+            BundleConfig::create(PostyouHeadlineTinyMceBundle::class)
                 ->setLoadAfter([ContaoCoreBundle::class])
-                ->setReplace(["headlinetinymce"])
+                ->setReplace(['headlinetinymce']),
         ];
     }
 }

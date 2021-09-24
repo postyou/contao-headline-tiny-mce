@@ -12,5 +12,10 @@ declare(strict_types=1);
  * @license LGPL-3.0+
  */
 
-$GLOBALS['TL_DCA']['tl_content']['fields']['headline']['eval']['allowHtml'] = true;
-$GLOBALS['TL_DCA']['tl_content']['fields']['headline']['eval']['rte'] = 'tinyHeadlineMCE';
+namespace Postyou\HeadlineTinyMceBundle;
+
+use Symfony\Component\HttpKernel\Bundle\Bundle;
+
+class PostyouHeadlineTinyMceBundle extends Bundle
+{
+}

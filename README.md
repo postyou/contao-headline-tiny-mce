@@ -1,34 +1,32 @@
-contao-headline-tiny-mce
+Contao Headline TinyMCE
 ============
+[![](https://img.shields.io/packagist/v/postyou/headline-tiny-mce.svg)](https://packagist.org/packages/postyou/headline-tiny-mce)
+[![](https://img.shields.io/packagist/l/postyou/headline-tiny-mce.svg)](https://packagist.org/packages/postyou/headline-tiny-mce)
+[![](https://img.shields.io/packagist/dt/postyou/headline-tiny-mce.svg)](https://packagist.org/packages/postyou/headline-tiny-mce)
 
-The master is for Contao 4! For Contao 3 check out the "contao3" branch.
+This Contao CMS extension adds a small TinyMCE editor to all DCA `headline` fields and allows HTML tags for them.
 
-A Contao extension to have and regulate html tags in headings
+![](docs/tinyMCE-editor.png)
 
-Caution: does not work well with other extensions which declare custom content elements. Make shure those are loaded before this extension.
+## Template
+The `be_tinyHeadlineMCE.html5` template is used by default. It disables the paragraph root block and limits the valid elements. Only [phrasing content](https://www.w3.org/TR/2014/REC-html5-20141028/dom.html#phrasing-content-1) should be allowed inside of HTML headings.
+```php
+<script>
+window.tinymce && tinymce.init({
+  ...
 
-install contao4:
-```
-"require": {
-    "postyou/headline-tiny-mce": "~2"
-},
-```
+  // limit height
+  height: 110,
 
-install contao3:
-```
-"require": {
-    "postyou/headline-tiny-mce": "dev-contao3"
-},
-```
-both:
-```
-"repositories": [
+  // disable menubar
+  menubar: false,
 
-    {
+  // disable default <p></p> root blocks
+  forced_root_block: false,
 
-        "type": "vcs",
-        "url": "https://github.com/postyou/contao-headline-tiny-mce"
-    }
-
-],
+  // limit toolbar according to valid_elements
+  toolbar: 'link unlink | bold italic | code',
+  valid_elements: 'a[href|target|title],strong/b,em/i,br'
+});
+</script>
 ```

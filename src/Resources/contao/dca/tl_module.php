@@ -12,5 +12,5 @@ declare(strict_types=1);
  * @license LGPL-3.0+
  */
 
-$GLOBALS['TL_DCA']['tl_content']['fields']['headline']['eval']['allowHtml'] = true;
-$GLOBALS['TL_DCA']['tl_content']['fields']['headline']['eval']['rte'] = 'tinyHeadlineMCE';
+$GLOBALS['TL_DCA']['tl_module']['fields']['headline']['eval']['allowHtml'] = true;
+$GLOBALS['TL_DCA']['tl_module']['fields']['headline']['eval']['rte'] = 'tinyHeadlineMCE';
