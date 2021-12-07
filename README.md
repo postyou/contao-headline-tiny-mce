@@ -10,23 +10,23 @@ This Contao CMS extension adds a small TinyMCE editor to all DCA `headline` fiel
 
 ## Template
 The `be_tinyHeadlineMCE.html5` template is used by default. It disables the paragraph root block and limits the valid elements. Only [phrasing content](https://www.w3.org/TR/2014/REC-html5-20141028/dom.html#phrasing-content-1) should be allowed inside of HTML headings.
-```php
+```html
 <script>
-window.tinymce && tinymce.init({
-  ...
+  window.tinymce && tinymce.init({
+    ...
 
-  // limit height
-  height: 110,
+    // limit height
+    height: 110,
 
-  // disable menubar
-  menubar: false,
+    // disable menubar
+    menubar: false,
 
-  // disable default <p></p> root blocks
-  forced_root_block: false,
+    // disable default <p></p> root blocks
+    forced_root_block: false,
 
-  // limit toolbar according to valid_elements
-  toolbar: 'link unlink | bold italic | code',
-  valid_elements: 'a[href|target|title],strong/b,em/i,br'
-});
+    // limit toolbar according to valid_elements
+    toolbar: 'link unlink | bold italic | code',
+    valid_elements: 'a[href|target|title],strong/b,em/i,br'
+  });
 </script>
 ```
