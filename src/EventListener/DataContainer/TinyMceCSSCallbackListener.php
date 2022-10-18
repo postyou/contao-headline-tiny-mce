@@ -15,7 +15,8 @@ namespace Postyou\HeadlineTinyMceBundle\EventListener\DataContainer;
 use Contao\CoreBundle\DependencyInjection\Attribute\AsCallback;
 use Contao\DataContainer;
 
-#[AsCallback(table: "tl_content", target: "config.onload")]
+#[AsCallback(table: 'tl_content', target: 'config.onload')]
+#[AsCallback(table: 'tl_module', target: 'config.onload')]
 class TinyMceCSSCallbackListener
 {
     public function __invoke(DataContainer $dataContainer): void
