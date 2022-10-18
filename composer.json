@@ -1,53 +1,47 @@
 {
-  "name": "postyou/headline-tiny-mce",
-  "type": "contao-bundle",
-  "description": "HTML headline for Contao",
-  "license": "LGPL-3.0+",
-  "keywords": [
-    "contao",
-    "headline",
-    "html",
-    "tiny-mce"
-  ],
-  "authors": [
-    {
-      "name":"POSTYOU Digital- & Filmagentur",
-      "homepage":"https://www.postyou.de"
+    "name": "postyou/headline-tiny-mce",
+    "type": "contao-bundle",
+    "description": "HTML headline for Contao",
+    "license": "LGPL-3.0+",
+    "keywords": [
+        "contao",
+        "headline",
+        "html",
+        "tiny-mce"
+    ],
+    "authors": [
+        {
+            "name": "POSTYOU Digital- & Filmagentur",
+            "homepage": "https://www.postyou.de"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "contao/core-bundle": "^4.13",
+        "contao-components/tinymce4": "^5.0",
+        "symfony/config": "^5.4",
+        "symfony/dependency-injection": "^5.4",
+        "symfony/http-kernel": "^5.4"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.0",
+        "friendsofphp/php-cs-fixer": "^3.12"
+    },
+    "conflict": {
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Postyou\\HeadlineTinyMceBundle\\": "src/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "contao-components/installer": true,
+            "contao/manager-plugin": true
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "Postyou\\HeadlineTinyMceBundle\\ContaoManager\\Plugin"
     }
-  ],
-  "require": {
-    "php": "^8.0",
-    "contao/core-bundle": "^4.10",
-    "contao-components/tinymce4": "^5.0",
-    "symfony/config": "^5.1",
-    "symfony/dependency-injection": "^5.1",
-    "symfony/http-kernel": "^5.1"
-  },
-  "conflict": {
-    "contao/manager-plugin": "<2.0 || >=3.0"
-  },
-  "require-dev": {
-    "contao/manager-plugin": "^2.0",
-    "contao/easy-coding-standard": "^3.3"
-  },
-  "autoload": {
-    "psr-4": {
-      "Postyou\\HeadlineTinyMceBundle\\": "src/"
-    }
-  },
-  "extra": {
-    "contao-manager-plugin": "Postyou\\HeadlineTinyMceBundle\\ContaoManager\\Plugin"
-  },
-  "scripts": {
-    "cs-fixer": [
-        "vendor/bin/ecs check src/ --fix --ansi"
-    ]
-  },
-  "config": {
-    "allow-plugins": {
-      "contao-components/installer": true,
-      "dealerdirect/phpcodesniffer-composer-installer": true,
-      "contao/manager-plugin": true
-    }
-  }
 }
