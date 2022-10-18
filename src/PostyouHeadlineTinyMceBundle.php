@@ -7,8 +7,6 @@ declare(strict_types=1);
  *
  * (c) POSTYOU Digital- & Filmagentur
  *
- * @author  Gerald Meier
- * @link    https://www.postyou.de
  * @license LGPL-3.0+
  */
 
@@ -18,4 +16,8 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class PostyouHeadlineTinyMceBundle extends Bundle
 {
+    public function getPath(): string
+    {
+        return \dirname(__DIR__);
+    }
 }

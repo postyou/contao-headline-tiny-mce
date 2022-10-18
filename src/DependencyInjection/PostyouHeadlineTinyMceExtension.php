@@ -7,8 +7,6 @@ declare(strict_types=1);
  *
  * (c) POSTYOU Digital- & Filmagentur
  *
- * @author  Gerald Meier
- * @link    https://www.postyou.de
  * @license LGPL-3.0+
  */
 
@@ -25,7 +23,7 @@ class PostyouHeadlineTinyMceExtension extends Extension
     {
         $loader = new YamlFileLoader(
             $container,
-            new FileLocator(__DIR__.'/../Resources/config')
+            new FileLocator(__DIR__.'/../../config')
         );
 
         $loader->load('services.yml');

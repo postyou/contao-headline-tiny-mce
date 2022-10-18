@@ -16,7 +16,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $services
         ->set(HeaderCommentFixer::class)
         ->call('configure', [[
-            'header' => "This file is part of postyou/headline-tiny-mce.\n\n(c) POSTYOU Digital- & Filmagentur\n\n@author  Gerald Meier\n@link    https://www.postyou.de\n@license LGPL-3.0+",
+            'header' => "This file is part of postyou/headline-tiny-mce.\n\n(c) POSTYOU Digital- & Filmagentur\n\n@license LGPL-3.0+",
         ]])
     ;
 };

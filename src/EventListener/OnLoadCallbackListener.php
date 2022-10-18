@@ -7,19 +7,15 @@ declare(strict_types=1);
  *
  * (c) POSTYOU Digital- & Filmagentur
  *
- * @author  Gerald Meier
- * @link    https://www.postyou.de
  * @license LGPL-3.0+
  */
 
 namespace Postyou\HeadlineTinyMceBundle\EventListener;
 
-use Contao\CoreBundle\ServiceAnnotation\Callback;
+use Contao\CoreBundle\DependencyInjection\Attribute\AsCallback;
 
-/**
- * @Callback(target="config.onload", table="tl_content")
- * @Callback(target="config.onload", table="tl_module")
- */
+#[AsCallback('tl_content', 'config.onload')]
+#[AsCallback('tl_module', 'config.onload')]
 class OnLoadCallbackListener
 {
     public function __invoke(): void
