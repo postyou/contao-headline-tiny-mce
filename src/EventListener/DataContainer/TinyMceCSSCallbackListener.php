@@ -10,15 +10,15 @@ declare(strict_types=1);
  * @license LGPL-3.0+
  */
 
-namespace Postyou\HeadlineTinyMceBundle\EventListener;
+namespace Postyou\HeadlineTinyMceBundle\EventListener\DataContainer;
 
 use Contao\CoreBundle\DependencyInjection\Attribute\AsCallback;
+use Contao\DataContainer;
 
-#[AsCallback('tl_content', 'config.onload')]
-#[AsCallback('tl_module', 'config.onload')]
-class OnLoadCallbackListener
+#[AsCallback(table: "tl_content", target: "config.onload")]
+class TinyMceCSSCallbackListener
 {
-    public function __invoke(): void
+    public function __invoke(DataContainer $dataContainer): void
     {
         $GLOBALS['TL_CSS'][] = 'bundles/postyouheadlinetinymce/h_tinyMce.css|static';
     }
