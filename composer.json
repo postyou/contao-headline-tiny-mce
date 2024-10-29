@@ -18,7 +18,7 @@
     "require": {
         "php": "^8.0",
         "contao/core-bundle": "^4.13||^5.0",
-        "contao-components/tinymce4": "^5.0"
+        "contao-components/tinymce4": "^6.0"
     },
     "require-dev": {
         "contao/manager-plugin": "^2.0",
