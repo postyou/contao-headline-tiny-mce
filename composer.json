@@ -17,8 +17,8 @@
     ],
     "require": {
         "php": "^8.0",
-        "contao/core-bundle": "^4.13||^5.0",
-        "contao-components/tinymce4": "^6.0"
+        "contao/core-bundle": "^5.0",
+        "contao-components/tinymce4": "^6.1"
     },
     "require-dev": {
         "contao/manager-plugin": "^2.0",
@@ -35,7 +35,8 @@
     "config": {
         "allow-plugins": {
             "contao-components/installer": true,
-            "contao/manager-plugin": true
+            "contao/manager-plugin": true,
+            "php-http/discovery": false
         }
     },
     "extra": {
