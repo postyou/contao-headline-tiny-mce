@@ -9,24 +9,18 @@ This Contao CMS extension adds a small TinyMCE editor to all DCA `headline` fiel
 ![](docs/tinyMCE-editor.png)
 
 ## Template
-The `be_tinyHeadlineMCE.html5` template is used by default. It disables the paragraph root block and limits the valid elements. Only [phrasing content](https://www.w3.org/TR/2014/REC-html5-20141028/dom.html#phrasing-content-1) should be allowed inside of HTML headings.
-```html
-<script>
-  window.tinymce && tinymce.init({
-    ...
+The `be_tinyHeadlineMCE.html5` template is used by default. It restricts the menu and the valid elements. Only [phrasing content](https://www.w3.org/TR/2014/REC-html5-20141028/dom.html#phrasing-content-1) should be allowed inside of HTML headings.
 
-    // limit height
-    height: 110,
+Since TinyMce 6 the option to disable `forced_root_block` is no longer available. The headline is now always saved with a surrounding `<p>` tag. For this reason we use `striptags` to remove all tags that are not allowed in `be_tinyHeadlineMCE.html5`:
 
-    // disable menubar
-    menubar: false,
+```javascript
+// be_tinyHeadlineMCE.html5
 
-    // disable default <p></p> root blocks
-    forced_root_block: false,
+valid_elements: 'a[href|target|title],strong,em,span[style],br',
+```
 
-    // limit toolbar according to valid_elements
-    toolbar: 'link unlink | bold italic | code',
-    valid_elements: 'a[href|target|title],strong/b,em/i,br'
-  });
-</script>
+```twig
+{# @Contao/component/_headline.html.twig #}
+
+{{ headline.text|...|striptags('<a><strong><em><span><br>')|raw }}
 ```
