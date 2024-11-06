@@ -1,5 +1,5 @@
 {% use "@Contao/component/_headline.html.twig" %}
 
 {%- block headline_inner -%}
-    {{ headline.text|striptags('<a><strong><em><span><br>')|raw }}
+    {{ headline.text|csp_inline_styles|insert_tag|striptags('<a><strong><em><span><br>')|raw }}
 {%- endblock -%}
