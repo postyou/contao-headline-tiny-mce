@@ -5,7 +5,7 @@ declare(strict_types=1);
 $header = <<<'EOF'
     This file is part of postyou/headline-tiny-mce.
 
-    (c) POSTYOU Digital- & Filmagentur
+    (c) POSTYOU Werbeagentur
 
     @license LGPL-3.0+
     EOF;
