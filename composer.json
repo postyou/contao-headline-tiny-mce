@@ -11,14 +11,16 @@
     ],
     "authors": [
         {
-            "name": "POSTYOU Digital- & Filmagentur",
+            "name": "POSTYOU Werbeagentur",
             "homepage": "https://www.postyou.de"
         }
     ],
     "require": {
         "php": "^8.0",
         "contao/core-bundle": "^5.0",
-        "contao-components/tinymce4": "^6.1"
+        "contao-components/tinymce4": "^6.1",
+        "symfony/config": "^6.4 || ^7.0",
+        "symfony/dependency-injection": "^6.4 || ^7.0"
     },
     "require-dev": {
         "contao/manager-plugin": "^2.0",
