@@ -13,7 +13,7 @@
 <?php $this->endblock(); ?>
 
 <?php $this->block('custom'); ?>
-  min_height: 125,
-  height: 125,
+  min_height: 139,
+  height: 139,
   newline_behavior: 'linebreak',
 <?php $this->endblock(); ?>
